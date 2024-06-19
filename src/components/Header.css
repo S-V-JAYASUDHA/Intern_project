@@ -1,0 +1,27 @@
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+  }
+  
+  .nav-and-buttons nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-and-buttons nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .user-actions button {
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
