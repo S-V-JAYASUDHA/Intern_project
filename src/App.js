@@ -9,7 +9,7 @@ import ContactPage from './pages/ContactPage';
 import CollaborateContent from './components/CollaborateContent';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
-
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -44,10 +44,10 @@ function App() {
             <Route path="/Signup" element={<SignupPage />} />
             {/* Add signup route if needed */}
           </Routes>
+          {window.location.pathname !== '/signup' && <Footer />}
+          
         </main>
-        <footer>
-          <p>Work of our website goes here...</p>
-        </footer>
+        
         <button
           className="scroll-to-top"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

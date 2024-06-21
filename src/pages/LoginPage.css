@@ -5,8 +5,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0; /* Example background color */
-    
+    background-image: url(https://wallpaperaccess.com/full/1196472.jpg);
+    background-size: cover;
+    background-position: center;
   }
   
   .login-form {

@@ -2,15 +2,48 @@
 
 
 .signup-page {
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
     background-image: url(https://wallpaperaccess.com/full/1196472.jpg);
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
   }
-  
+
+  .container {
+    max-width:100%;
+    display:flex;
+    box-sizing: border-box;
+    border-radius:5px;
+}
+ 
+.image-container {
+    position: absolute;
+    top: 50px;
+    right: 90px;
+  }
+
+  form {
+    height:80%;
+    width:50%;
+    margin-top:80px;
+    margin-bottom:80px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    position: relative;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
   
   .signup-page h3 {
     text-align: center;
@@ -25,6 +58,7 @@
     display: block;
     margin-bottom: 5px;
   }
+  
   
   .container input[type="text"],
   .container input[type="password"],
