@@ -1,10 +1,15 @@
+// App.js
+
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import ImageSlider from './components/ImageSlider';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import CollaborateContent from './components/CollaborateContent';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+
 
 function App() {
   return (
@@ -18,25 +23,27 @@ function App() {
             <div className="nav-and-buttons">
               <nav>
                 <ul>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/about">About</Link></li>
-                  <li><Link to="/contact">Contact</Link></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/contact">Contact</a></li>
                 </ul>
               </nav>
               <div className="user-actions">
-                <button id="login">Login</button>
-                <button id="signup">Sign Up</button>
+                <button onClick={() => window.location.href = '/login'}>Login</button>
+                <button onClick={() => window.location.href = '/signup'}>Sign Up</button>
               </div>
             </div>
           </div>
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<ImageSlider />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/Signup" element={<SignupPage />} />
+            {/* Add signup route if needed */}
           </Routes>
-          <CollaborateContent />
         </main>
         <footer>
           <p>Work of our website goes here...</p>
@@ -51,5 +58,15 @@ function App() {
     </Router>
   );
 }
+
+const HomePage = () => {
+  return (
+    <div>
+      <ImageSlider />
+      <CollaborateContent />
+     
+    </div>
+  );
+};
 
 export default App;

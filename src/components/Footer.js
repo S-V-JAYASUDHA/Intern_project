@@ -1,10 +1,17 @@
+// Footer.js
+
 import React from 'react';
-import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer-content">
+    <footer>
       <p>Work of our website goes here...</p>
+      <button
+        className="scroll-to-top"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        ↑
+      </button>
     </footer>
   );
 };
